@@ -1,0 +1,54 @@
+@use "@/assets/styles/utils/index" as *;
+
+.footer {
+	background-color: #1c1d21;
+	color: #fff;
+	padding-left: 530px;
+	position: relative;
+	overflow: hidden;
+	a {
+		color: #fff;
+	}
+}
+
+.footer-wrap {
+	padding: 45px 48px 50px 0;
+}
+
+.footer-list {
+	display: flex;
+	border-bottom: 1px solid #fff;
+	padding-bottom: 21px;
+	margin-bottom: 21px;
+	li {
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+		a {
+			display: block;
+			position: relative;
+			text-decoration: none;
+			&:before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 1px;
+				background-color: #fff;
+				-webkit-transition: 0.4s ease;
+				transition: 0.4s ease;
+				width: 100%;
+			}
+			&:hover {
+				color: #cdccb4;
+				&:before {
+					width: 0;
+					background-color: #cdccb4;
+				}
+			}
+		}
+	}
+}
+.footer-copyrigt {
+	margin-bottom: 10px;
+}

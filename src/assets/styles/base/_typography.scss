@@ -1,0 +1,109 @@
+/*--------------------------------------
+VARIABLES
+--------------------------------------*/
+@use "@/assets/styles/utils/index" as *;
+/*--------------------------------------
+/*-------------------- DEFAULT STYLES --------------------*/
+*::selection {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+body {
+  position: relative;
+  color: #1c1d21;
+  line-height: 1.2;
+  font-size: 18px;
+  color: $black;
+  font-family: $font_family;
+  min-width: 320px;
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+a {
+  color: #9f9f9f;
+  transition: $transition;
+  &:hover {
+    color: $accent;
+  }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1,
+.h1 {
+  font-size: 90px;
+  letter-spacing: 0.07em;
+}
+h2,
+.h2 {
+  font-size: 66px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  @media (max-width: 1500px) {
+    font-size: 50px;
+  }
+  @media (max-width: 1365px) {
+    font-size: 44px;
+  }
+  @media (max-width: 1199px) {
+    font-size: 40px;
+  }
+}
+h3,
+.h3 {
+  font-size: 50px;
+}
+h4,
+.h4 {
+  font-size: 40px;
+  font-size: 40px;
+  letter-spacing: 0.07em;
+  @media (max-width: 1500px) {
+    font-size: 30px;
+  }
+}
+h5,
+.h5 {
+  font-size: 30px;
+  @media (max-width: 1500px) {
+    font-size: 26px;
+  }
+}
+h6,
+.h6 {
+  font-size: 20px;
+  @media (max-width: 1500px) {
+    font-size: 18px;
+  }
+}
+
+.text {
+  &-xl {
+    font-size: 24px;
+  }
+  &-lg {
+    font-size: 20px;
+  }
+  &-md {
+    font-size: 16px;
+  }
+  &-sm {
+    font-size: 14px;
+  }
+}

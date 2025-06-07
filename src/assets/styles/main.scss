@@ -1,0 +1,126 @@
+/*--------------------------------------
+VARIABLES
+--------------------------------------*/
+@use "@/assets/styles/utils/index" as *;
+/*--------------------------------------
+BASE STYLES
+--------------------------------------*/
+
+@use "./base";
+/*--------------------------------------
+VARIABLES
+--------------------------------------*/
+@use "./ui";
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  .page-content {
+    flex-grow: 1;
+  }
+}
+
+// CUSTOM SCROLL
+@media (min-width: 1200px) {
+  * {
+    scrollbar-color: #c1c1c1 transparent;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: transparent;
+      border-radius: 0;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #c1c1c1;
+      border-radius: 0;
+      &:hover {
+        background-color: #272727;
+      }
+    }
+  }
+}
+
+section {
+  overflow: hidden;
+  position: relative;
+}
+
+// LOGO
+.logo {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  line-height: 1;
+  max-width: max-content;
+  z-index: 2;
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+// Arrow for Slider
+.slider-navigation {
+  z-index: 2;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  .arrow {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    &-prev {
+      &:hover {
+        transform: translateX(-4px);
+      }
+    }
+    &-next {
+      &:hover {
+        transform: translateX(4px);
+      }
+    }
+    &:active {
+      img {
+        opacity: 0.5;
+        transform: scale(0.95);
+      }
+    }
+    img {
+      transition: 0.15s ease-in-out;
+    }
+  }
+}
+// Dotts for Slider
+.slick-dots {
+  display: flex;
+  z-index: 2;
+  .qty,
+  .slick-active {
+    display: inline-flex;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #cdccb4;
+    font-weight: 700;
+    position: relative;
+  }
+  .slick-active {
+    border-right: 1px solid #cdccb4;
+    padding-right: 5px;
+    min-width: 40px;
+    font-size: 24px;
+  }
+  .qty {
+    padding-left: 8px;
+    padding-top: 10px;
+    font-size: 34px;
+  }
+}

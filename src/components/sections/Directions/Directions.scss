@@ -1,0 +1,106 @@
+.directions {
+  &.light {
+    background-color: #fff;
+  }
+  &.dark {
+    background-color: #1c1d21;
+    color: #fff;
+    .directions__slide-text {
+      color: #fff;
+    }
+  }
+  &__wrap {
+    position: relative;
+  }
+  &__slide {
+    padding-left: 530px;
+    position: relative;
+    &.swiper-slide-active {
+      h6 span,
+      .text,
+      .directions__slide-img {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+
+      h6 span {
+        transition-delay: 0.15s;
+      }
+
+      .text {
+        transition-delay: 0.3s;
+      }
+
+      .directions__slide-img {
+        transition-delay: 0.25s;
+      }
+    }
+  }
+  &__slide-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0;
+    transform: translateX(40px) scale(1.03);
+    transition:
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.45s ease;
+  }
+  &__slide-bottom {
+    max-width: 520px;
+    h6 {
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #cdccb4;
+      border-bottom: 1px solid #cdccb4;
+      padding-bottom: 6px;
+      margin-bottom: 17px;
+      span {
+        display: block;
+        opacity: 0;
+        transform: translateX(-40px);
+        transition:
+          transform 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+          opacity 0.35s ease;
+      }
+    }
+    .text {
+      font-family: Open Sans;
+      font-weight: 300;
+      color: #9f9f9f;
+      opacity: 0;
+      transform: translateX(-30px);
+      transition:
+        transform 0.5s ease-in-out 0.1s,
+        opacity 0.4s ease-in-out 0.15s;
+    }
+  }
+  &__slide-cover {
+    min-height: 1024px;
+    position: relative;
+    display: flex;
+    padding-top: 130px;
+  }
+  .title {
+    margin-bottom: 19px;
+  }
+  .slogan {
+    font-weight: 300;
+    margin-bottom: 160px;
+    line-height: normal;
+    max-width: 700px;
+  }
+  &__slide-info {
+    width: 100%;
+    max-width: 870px;
+    position: relative;
+    z-index: 1;
+  }
+  &__navigation {
+    padding-left: 530px;
+  }
+}
