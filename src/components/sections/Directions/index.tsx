@@ -67,8 +67,8 @@ export default function Directions({
           className="directions__slider"
         >
           {slides.map((slide, i) => (
-            <SwiperSlide key={i} className="directions__slide">
-              <div className="directions__slide-cover">
+            <SwiperSlide key={i} className="directions__slide p-block">
+              <div className="directions__slide-cover min-h">
                 <div className="directions__slide-info">
                   <h2 className="title">{title}</h2>
                   <p className="h4 slogan">{slogan}</p>
@@ -79,11 +79,17 @@ export default function Directions({
                     <p className="text text-xl">{slide.text}</p>
                   </div>
                 </div>
-                <img className="directions__slide-img" src={slide.img} alt={title} />
+                <Image
+                  className="directions__slide-img"
+                  src={slide.img}
+                  alt={title}
+                  width={880}
+                  height={1024}
+                />
               </div>
             </SwiperSlide>
           ))}
-          <div className="directions__navigation slider-navigation">
+          <div className="directions__navigation slider-navigation p-block">
             <ul className="slick-dots">
               <li className="slick-active">0{activeSlide + 1}</li>
               <li className="qty">0{totalSlides}</li>

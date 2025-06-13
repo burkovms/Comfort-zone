@@ -1,9 +1,51 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import './Header.scss';
 
+const headerData = {
+  navigation: [
+    {
+      src: '/promotions',
+      name: 'Акції',
+      prefetch: true,
+    },
+    {
+      src: '/tariffs',
+      name: 'Тарифи',
+      prefetch: false,
+    },
+    {
+      src: '/programms',
+      name: 'Програми',
+      prefetch: true,
+    },
+    // {
+    //   src: '/schedule',
+    //   name: 'Расписание занятий'
+    // },
+    // {
+    //   src: '/partners',
+    //   name: 'Партнёры и тренеры'
+    // },
+    {
+      src: '/about',
+      name: 'Про клуб',
+      prefetch: true,
+    },
+    {
+      src: '/contacts',
+      name: 'Контакти',
+      prefetch: true,
+    },
+  ],
+  phone: '8 800 665 54 33',
+};
+
 export const Header = () => {
+  const pathname = usePathname();
+
   return (
     <>
       <div className="nav-wrap">
@@ -14,69 +56,47 @@ export const Header = () => {
           </Link>
           <nav className="nav-menu">
             <ul className="nav-list">
-              <li>
-                <a href="actions.html">
-                  <span>Акции</span>
-                </a>
-              </li>
-              <li>
-                <a href="programms.html">
-                  <span>Программы</span>
-                </a>
-              </li>
-              <li>
-                <a href="tariffs.html">
-                  <span>Тарифы</span>
-                </a>
-              </li>
-              <li>
-                <a href="schedule.html">
-                  <span>Расписание занятий</span>
-                </a>
-              </li>
-              <li>
-                <a href="about.html">
-                  <span>О клубе</span>
-                </a>
-              </li>
-              <li>
-                <a href="partners.html">
-                  <span>Партнёры и тренеры</span>
-                </a>
-              </li>
-              <li>
-                <a href="contacts.html">
-                  <span>Контакты</span>
-                </a>
-              </li>
+              {headerData.navigation.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    href={item.src}
+                    prefetch={item.prefetch}
+                    className={pathname === item.src ? 'active' : ''}
+                  >
+                    <span>{item.name}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
-          <a className="menu-phone" href="tel:88006655433">
-            8 800 665-54-33
-          </a>
-          <a href="#" className="popup-open menu-btn" rel="action1">
-            <span className="btn-img">
-              <Image src="/nav-btn.png" alt="Navigation Button" width={49} height={52} />
-            </span>
-            <p>включайся</p>
-          </a>
+          <div>
+            <a className="menu-phone text-lg" href={`tel:${headerData.phone.replace(/\s/g, '')}`}>
+              {headerData.phone}
+            </a>
+            <a href="#" className="popup-open menu-btn">
+              <span className="btn-img">
+                <Image src="/nav-btn.png" alt="Navigation Button" width={49} height={52} />
+              </span>
+              <p>вмикайся</p>
+            </a>
+          </div>
         </div>
       </div>
       <div className="nav-btn-wrap">
-        <a href="#" className="nav-btn">
+        <button className="nav-btn">
           <span></span>
           <span></span>
           <span></span>
-        </a>
-        <a href="index.html" className="logo-mobile">
+        </button>
+        <Link href="/" className="logo-mobile">
           <Image src="/logo-mobile.svg" alt="mobile logotype" width={21} height={57} />
-        </a>
+        </Link>
         <div className="nav-btn-info">
-          <a className="phone-mobile" href="tel:88006655433">
-            8 800 665-54-33
+          <a className="phone-mobile" href={`tel:${headerData.phone.replace(/\s/g, '')}`}>
+            {headerData.phone}
           </a>
-          <a href="#" className="popup-open mobile-btn-popup" rel="action1">
-            включайся
+          <a href="#" className="popup-open mobile-btn-popup">
+            вмикайся
           </a>
         </div>
       </div>

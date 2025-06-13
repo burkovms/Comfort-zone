@@ -47,8 +47,9 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 90px;
+  font-size: 66px;
   letter-spacing: 0.07em;
+  text-transform: uppercase;
 }
 h2,
 .h2 {
@@ -72,7 +73,6 @@ h3,
 h4,
 .h4 {
   font-size: 40px;
-  font-size: 40px;
   letter-spacing: 0.07em;
   @media (max-width: 1500px) {
     font-size: 30px;
@@ -87,10 +87,7 @@ h5,
 }
 h6,
 .h6 {
-  font-size: 20px;
-  @media (max-width: 1500px) {
-    font-size: 18px;
-  }
+  font-size: 18px;
 }
 
 .text {

@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -6,13 +5,7 @@ export const metadata: Metadata = {
 };
 
 const About = () => {
-  return (
-    <section>
-      <div className="container">
-        <h1>About</h1>
-      </div>
-    </section>
-  );
+  return <h1 className="p-block">About</h1>;
 };
 
 export default About;

@@ -13,7 +13,6 @@
     position: relative;
   }
   &__slide {
-    padding-left: 530px;
     position: relative;
     &.swiper-slide-active {
       h6 span,
@@ -80,7 +79,6 @@
     }
   }
   &__slide-cover {
-    min-height: 1024px;
     position: relative;
     display: flex;
     padding-top: 130px;
@@ -99,8 +97,5 @@
     max-width: 870px;
     position: relative;
     z-index: 1;
-  }
-  &__navigation {
-    padding-left: 530px;
   }
 }

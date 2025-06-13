@@ -1,11 +1,38 @@
 .tabs-block {
-  padding-left: 530px;
   padding-top: 60px;
-  padding-bottom: 130px;
+  padding-bottom: 100px;
   background-color: #1c1d21;
   position: relative;
-  &__cover {
+  overflow: visible;
+  display: flex;
+  justify-content: space-between;
+  &.advantages {
     overflow: hidden;
+    .images {
+      display: none;
+    }
+  }
+  &.registration {
+    .images {
+      width: 345px;
+      height: 661px;
+    }
+    .tabs-block__wrap > li img {
+      display: none;
+    }
+  }
+
+  .images {
+    align-self: flex-start;
+    overflow: hidden;
+    flex-grow: 1;
+    position: sticky;
+    right: 0;
+    top: 0;
+    flex-shrink: 0;
+    img {
+      right: 15%;
+    }
   }
   h2 {
     max-width: 870px;
@@ -69,19 +96,6 @@
         opacity: 0.7;
         transition: 0.3s ease-in-out;
       }
-      img {
-        opacity: 0;
-        max-height: 100%;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(600px, -50%) rotate(10deg) scale(1.05);
-        filter: blur(2px);
-        transition:
-          transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
-          opacity 0.8s ease-out,
-          filter 0.8s ease-out;
-      }
       &:active {
         &:not(.active) {
           .info {
@@ -102,11 +116,6 @@
           line-height: 170px;
           color: rgba(255, 255, 255, 0.3);
         }
-        img {
-          opacity: 1;
-          transform: translate(0, -50%) rotate(0) scale(1);
-          filter: blur(0);
-        }
       }
       &:hover,
       &.active {
@@ -115,6 +124,31 @@
           opacity: 1;
         }
       }
+    }
+  }
+  .btn-cover {
+    margin-top: 85px;
+    padding-left: 10px;
+  }
+
+  img {
+    opacity: 0;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(600px, -50%) rotate(10deg) scale(1.05);
+    filter: blur(2px);
+    transition:
+      transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.8s ease-out,
+      filter 0.8s ease-out;
+  }
+  .active {
+    img {
+      opacity: 1;
+      transform: translate(0, -50%) rotate(0) scale(1);
+      filter: blur(0);
     }
   }
 }

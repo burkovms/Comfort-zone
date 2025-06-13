@@ -1,0 +1,37 @@
+.link {
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  gap: 12px;
+  color: #cdccb4;
+  position: relative;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  span {
+    border-bottom: 1px solid #cdccb4;
+    transition: border 0.35s ease;
+  }
+
+  &:hover {
+    color: #9f9f9f;
+    span {
+      border-color: transparent;
+    }
+    svg {
+      transform: translateX(-3px);
+      path {
+        stroke: #9f9f9f;
+      }
+    }
+  }
+  svg {
+    transform: translateX(0);
+    transition: transform 0.35s ease;
+    path {
+      stroke: #cdccb4;
+      transition: stroke 0.35s ease;
+    }
+  }
+}

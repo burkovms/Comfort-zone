@@ -15,58 +15,58 @@ const slides = [
   {
     img: '/photo_studia.jpg',
     avatar: '/photo-about-1.png',
-    name: 'Дэвид Стэтхэм',
-    profile: 'Актёр',
-    text: 'Медитация очень важное занятие в жизни. Если вы ещё не задумывались об этом, вы зря тратите время!',
+    name: 'Девід Стейтем',
+    profile: 'Актор',
+    text: 'Медитація — дуже важливе заняття в житті. Якщо ви ще не замислювалися про це, ви даремно витрачаєте час!',
   },
   {
     img: '/bg-bottom.jpg',
     avatar: '/photo-about-2.png',
-    name: 'Вин Дизель',
-    profile: 'Актёр',
-    text: 'Медитация очень важное занятие в жизни. Если вы ещё не задумывались об этом, вы зря тратите время!',
+    name: 'Він Дізель',
+    profile: 'Актор',
+    text: 'Медитація — дуже важливе заняття в житті. Якщо ви ще не замислювалися про це, ви даремно витрачаєте час!',
   },
   {
     img: '/photo_studia.jpg',
     avatar: '/photo-about-1.png',
-    name: 'Дэвид Стэтхэм',
-    profile: 'Актёр',
-    text: 'Медитация очень важное занятие в жизни. Если вы ещё не задумывались об этом, вы зря тратите время!',
+    name: 'Девід Стейтем',
+    profile: 'Актор',
+    text: 'Медитація — дуже важливе заняття в житті. Якщо ви ще не замислювалися про це, ви даремно витрачаєте час!',
   },
   {
     img: '/bg-bottom.jpg',
     avatar: '/photo-about-2.png',
-    name: 'Вин Дизель',
-    profile: 'Актёр',
-    text: 'Медитация очень важное занятие в жизни. Если вы ещё не задумывались об этом, вы зря тратите время!',
+    name: 'Він Дізель',
+    profile: 'Актор',
+    text: 'Медитація — дуже важливе заняття в житті. Якщо ви ще не замислювалися про це, ви даремно витрачаєте час!',
   },
   {
     img: '/photo_studia.jpg',
     avatar: '/photo-about-1.png',
-    name: 'Дэвид Стэтхэм',
-    profile: 'Актёр',
-    text: 'Медитация очень важное занятие в жизни. Если вы ещё не задумывались об этом, вы зря тратите время!',
+    name: 'Девід Стейтем',
+    profile: 'Актор',
+    text: 'Медитація — дуже важливе заняття в житті. Якщо ви ще не замислювалися про це, ви даремно витрачаєте час!',
   },
   {
     img: '/bg-bottom.jpg',
     avatar: '/photo-about-2.png',
-    name: 'Вин Дизель',
-    profile: 'Актёр',
-    text: 'Медитация очень важное занятие в жизни. Если вы ещё не задумывались об этом, вы зря тратите время!',
+    name: 'Він Дізель',
+    profile: 'Актор',
+    text: 'Медитація — дуже важливе заняття в житті. Якщо ви ще не замислювалися про це, ви даремно витрачаєте час!',
   },
   {
     img: '/photo_studia.jpg',
     avatar: '/photo-about-1.png',
-    name: 'Дэвид Стэтхэм',
-    profile: 'Актёр',
-    text: 'Медитация очень важное занятие в жизни. Если вы ещё не задумывались об этом, вы зря тратите время!',
+    name: 'Девід Стейтем',
+    profile: 'Актор',
+    text: 'Медитація — дуже важливе заняття в житті. Якщо ви ще не замислювалися про це, ви даремно витрачаєте час!',
   },
   {
     img: '/bg-bottom.jpg',
     avatar: '/photo-about-2.png',
-    name: 'Вин Дизель',
-    profile: 'Актёр',
-    text: 'Медитация очень важное занятие в жизни. Если вы ещё не задумывались об этом, вы зря тратите время!',
+    name: 'Він Дізель',
+    profile: 'Актор',
+    text: 'Медитація — дуже важливе заняття в житті. Якщо ви ще не замислювалися про це, ви даремно витрачаєте час!',
   },
 ];
 
@@ -104,10 +104,10 @@ const AboutStudio = () => {
         grabCursor={true}
         speed={800}
         loop
-        className="about-studio__slider-for"
+        className="about-studio__slider-for "
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index} className="about-studio__slide-for">
+          <SwiperSlide key={index} className="about-studio__slide-for p-block min-h">
             <span
               className="about-studio__slide-bg"
               style={{ backgroundImage: `url(${slide.img})` }}
@@ -127,7 +127,7 @@ const AboutStudio = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="about-studio__bottom">
+      <div className="about-studio__bottom p-block">
         <div className="about-studio__navigation">
           <span className="arrow-prev arrow">
             <Image src="/about-arrow-left.png" alt="Arrow Previous" width={21} height={10} />

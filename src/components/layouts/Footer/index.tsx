@@ -5,19 +5,19 @@ import './Footer.scss';
 
 export const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer p-block">
       <div className="footer-wrap">
         <ul className="footer-list text-sm">
           <li>
             <Link href="#" target="_blank">
-              Пресс-центр
+              Прес-центр
             </Link>
           </li>
           <li>
-            <Link href="#">Политика конфиденциальности</Link>
+            <Link href="#">Політика конфіденційності</Link>
           </li>
           <li>
-            <Link href="#">Соглашение на обработку персональных данных</Link>
+            <Link href="#">Угода на обробку персональних даних</Link>
           </li>
         </ul>
         <div className="footer-copyrigt text-sm">© 2025, «Зона комфорта»</div>

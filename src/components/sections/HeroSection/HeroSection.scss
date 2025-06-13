@@ -4,12 +4,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-left: 530px;
-  padding-block: 60px 40vh;
+  padding-block: 60px 35vh;
   overflow: visible;
   .wrap {
     position: sticky;
-    top: 100px;
+    top: 60px;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
   }
   h1 {
@@ -20,6 +19,7 @@
   p {
     text-transform: uppercase;
     margin-top: 5px;
+    font-size: 90px;
   }
 }
 

@@ -5,8 +5,6 @@
     position: relative;
   }
   &__slide-for {
-    min-height: 1024px;
-    padding-left: 530px;
     padding-top: 125px;
     position: relative;
     &.swiper-slide-active {
@@ -123,7 +121,6 @@
     }
   }
   &__bottom {
-    padding-left: 530px;
     position: absolute;
     bottom: 60px;
     left: 0;
