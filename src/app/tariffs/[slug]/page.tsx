@@ -2,6 +2,7 @@ import { tariffs } from '@/data/tariffs';
 import { notFound } from 'next/navigation';
 import { LinkArror } from '@/components/ui/LinkArror';
 import './TariffDetail.scss';
+import { Button } from '@/components/ui/Button';
 
 type Props = {
   params: { slug: string };
@@ -59,12 +60,9 @@ export default async function TariffDetail({ params }: Props) {
           <h6>Кількість відвідувань</h6>
           <p className="h5">{tariff.visit} в місяц</p>
           <div className="price">{tariff.price} ₴</div>
-          <a href="#" className="btn btn-black text-lg">
-            <svg className="border">
-              <rect pathLength="1"></rect>
-            </svg>
-            <span>Придбати</span>
-          </a>
+          <Button href="#" color="black" className="text-lg">
+            Придбати
+          </Button>
         </div>
       </div>
     </section>

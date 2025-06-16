@@ -1,13 +1,14 @@
 .main {
-  min-height: 640px;
-  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-block: 60px 35vh;
   overflow: visible;
+  padding-block: 60px 35vh;
+  height: 100vh;
+  min-height: 640px;
   .wrap {
     position: sticky;
+    overflow: hidden;
     top: 60px;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
   }

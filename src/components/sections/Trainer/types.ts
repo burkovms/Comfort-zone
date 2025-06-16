@@ -1,5 +1,9 @@
 export interface Trainer {
-  img: string;
+  img: {
+    src: string;
+    width: number;
+    height: number;
+  };
   name: string;
   text: string;
 }

@@ -14,26 +14,25 @@
   }
   &.registration {
     .images {
-      width: 345px;
-      height: 661px;
+      width: 422px;
+      height: 656px;
+      align-self: flex-start;
+      overflow: hidden;
+      position: sticky;
+      right: 0;
+      top: 60px;
+      flex-shrink: 0;
+      img {
+        right: 100px;
+        border-radius: 40px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+      }
     }
     .tabs-block__wrap > li img {
       display: none;
     }
   }
 
-  .images {
-    align-self: flex-start;
-    overflow: hidden;
-    flex-grow: 1;
-    position: sticky;
-    right: 0;
-    top: 0;
-    flex-shrink: 0;
-    img {
-      right: 15%;
-    }
-  }
   h2 {
     max-width: 870px;
     text-transform: uppercase;

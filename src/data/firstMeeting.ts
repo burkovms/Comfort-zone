@@ -9,8 +9,8 @@ export const firstMeeting: SectionData = {
       description: `<span>Знижка 15% на місячний абонемент</span> при замовленні з телефону`,
       img: {
         url: '/phone.png',
-        width: 345,
-        height: 661,
+        width: 292,
+        height: 606,
       },
     },
     {
@@ -19,8 +19,8 @@ export const firstMeeting: SectionData = {
       description: `В особистому кабінеті з’явиться статус <span>«Оплачено»</span>`,
       img: {
         url: '/phone.png',
-        width: 345,
-        height: 661,
+        width: 292,
+        height: 606,
       },
     },
     {
@@ -28,8 +28,8 @@ export const firstMeeting: SectionData = {
       text: 'На сайті або в мобільному застосунку.',
       img: {
         url: '/phone.png',
-        width: 345,
-        height: 661,
+        width: 292,
+        height: 606,
       },
     },
     {
@@ -37,8 +37,8 @@ export const firstMeeting: SectionData = {
       text: 'Обери програму та забронюй час відвідування на сайті, в застосунку або телефоном.',
       img: {
         url: '/phone.png',
-        width: 345,
-        height: 661,
+        width: 292,
+        height: 606,
       },
     },
   ],

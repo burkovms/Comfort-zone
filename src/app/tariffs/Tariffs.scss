@@ -23,7 +23,7 @@
     &:hover {
       color: inherit;
       .img {
-        animation: rotateCard 0.6s ease-in-out;
+        animation: animateCard 0.6s ease-in-out;
       }
       .tariffs__info .name {
         color: #cdccb4;
@@ -67,7 +67,7 @@
   }
 }
 
-@keyframes rotateCard {
+@keyframes animateCard {
   0% {
     transform: translateY(0);
   }

@@ -7,6 +7,9 @@ import ClubCards from '@/components/sections/ClubCards';
 
 import { firstMeeting } from '@/data/firstMeeting';
 import { advantages } from '@/data/advantages';
+import { Faq } from '@/components/sections/Faq';
+import { ContactsBlock } from '@/components/sections/ContactsBlock';
+import { BottomSection } from '@/components/sections/BottomSection';
 
 const slidesOne = [
   {
@@ -93,6 +96,12 @@ export default function Home() {
       <TabsSection className="registration" imagesBlock {...firstMeeting} />
 
       <ClubCards />
+
+      <Faq />
+
+      <ContactsBlock />
+
+      <BottomSection />
     </>
   );
 }

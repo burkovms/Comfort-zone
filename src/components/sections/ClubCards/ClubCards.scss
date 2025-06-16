@@ -1,10 +1,10 @@
 .club-cards {
   background-color: #fff;
   padding-top: 60px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
   display: flex;
-  position: relative;
   justify-content: space-between;
+  align-items: center;
   gap: 30px;
   .btn-gold {
     margin-top: 62px;
@@ -77,22 +77,9 @@
   }
 
   &__item {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
     &.active {
       position: relative;
       z-index: 1;
-      // .img {
-      //   opacity: 1;
-      //   transform: translateX(0);
-      //   transition-delay: 0.15s;
-      // }
-      // .club-cards__info {
-      //   opacity: 1;
-      //   transform: translateX(0);
-      //   transition-delay: 0.25s;
-      // }
     }
     .navigation {
       display: none;
@@ -100,11 +87,6 @@
         display: flex;
       }
     }
-    // .img {
-    //   transform: translateX(40px);
-    //   opacity: 0;
-    //   transition: 0.3s ease-out;
-    // }
     .title {
       font-family: Open Sans;
       font-weight: 300;
@@ -135,12 +117,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 20px;
   }
   &__info {
-    max-width: 480px;
-    width: 100%;
-    // transform: translateX(40px);
-    // opacity: 0;
-    // transition: 0.3s ease-out;
+    max-width: 580px;
+  }
+
+  &__item-imgs {
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+    max-width: 580px;
+    img {
+      box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1);
+      &:first-child {
+        transform: rotate(-4deg);
+      }
+      &:last-child {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: rotate(4deg);
+        z-index: -1;
+      }
+    }
   }
 }

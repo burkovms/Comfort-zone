@@ -1,0 +1,50 @@
+.faq {
+  background-color: #1c1d21;
+  color: #fff;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  z-index: 1;
+  .img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    max-width: 60%;
+    z-index: -1;
+  }
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .slogan {
+    font-family: Open Sans;
+    font-weight: 300;
+  }
+}
+
+.faq-specialist {
+  position: absolute;
+  right: 0;
+  bottom: 252px;
+  max-width: 480px;
+  width: 100%;
+  background-color: rgba(28, 29, 33, 0.8);
+  padding: 24px 24px 68px;
+  z-index: 3;
+  .name {
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    margin-bottom: 10px;
+  }
+  .prof {
+    font-family: Open Sans;
+    font-weight: 300;
+  }
+  .btn {
+    position: absolute;
+    bottom: -48px;
+    left: 24px;
+    max-width: 250px;
+    width: 100%;
+  }
+}

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import './Footer.scss';
 
 export const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <footer className="footer p-block">
       <div className="footer-wrap">
@@ -17,10 +18,10 @@ export const Footer = () => {
             <Link href="#">Політика конфіденційності</Link>
           </li>
           <li>
-            <Link href="#">Угода на обробку персональних даних</Link>
+            <Link href="#">Згода на обробку персональних даних</Link>
           </li>
         </ul>
-        <div className="footer-copyrigt text-sm">© 2025, «Зона комфорта»</div>
+        <div className="footer-copyrigt text-sm">© {year}, «Зона комфорта»</div>
         <Link href="#" className="logo">
           <Image src="/marketing-time.svg" alt="logo" width={140} height={28} />
         </Link>

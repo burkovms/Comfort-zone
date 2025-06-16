@@ -5,12 +5,7 @@ VARIABLES
 /*--------------------------------------
 BASE STYLES
 --------------------------------------*/
-
 @use "./base";
-/*--------------------------------------
-VARIABLES
---------------------------------------*/
-@use "./ui";
 
 .app {
   position: relative;
@@ -27,7 +22,7 @@ VARIABLES
 // CUSTOM SCROLL
 @media (min-width: 1200px) {
   * {
-    scrollbar-color: #c1c1c1 transparent;
+    scrollbar-color: #bbb transparent;
     scrollbar-width: thin;
     &::-webkit-scrollbar {
       width: 6px;
@@ -35,7 +30,7 @@ VARIABLES
       border-radius: 0;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: #c1c1c1;
+      background-color: #bbb;
       border-radius: 0;
       &:hover {
         background-color: #272727;

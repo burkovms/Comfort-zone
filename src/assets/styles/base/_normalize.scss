@@ -147,14 +147,12 @@ img {
   user-select: none;
 }
 
-b,
-strong {
-  font-weight: bold;
-}
 button,
 input[type="button"],
 input[type="submit"] {
   cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
 }
 button[disabled],
 html input[disabled] {

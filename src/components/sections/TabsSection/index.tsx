@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import './TabsSection.scss';
 import { SectionData } from '@/types/firstMeeting';
+import { Button } from '@/components/ui/Button';
 
 const TabsSection = ({ className, imagesBlock, ...props }: SectionData) => {
   const [tabActive, setTabActive] = useState<number>(0);
@@ -38,18 +38,16 @@ const TabsSection = ({ className, imagesBlock, ...props }: SectionData) => {
                 alt="Image tab"
                 width={item.img.width}
                 height={item.img.height}
+                quality={90}
               />
             </li>
           ))}
         </ul>
         {props.button && (
           <div className="btn-cover">
-            <Link className="btn btn-white" href={props.button.link || '#'}>
-              <svg className="border">
-                <rect pathLength="1" />
-              </svg>
-              <span>{props.button.text}</span>
-            </Link>
+            <Button href={props.button.link} color="white">
+              {props.button.text}
+            </Button>
           </div>
         )}
       </div>

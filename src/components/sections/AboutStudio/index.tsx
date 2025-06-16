@@ -108,10 +108,13 @@ const AboutStudio = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="about-studio__slide-for p-block min-h">
-            <span
+            {/* <span
               className="about-studio__slide-bg"
               style={{ backgroundImage: `url(${slide.img})` }}
-            />
+            /> */}
+            <div className="about-studio__slide-bg">
+              <Image src={slide.img} alt="background" fill />
+            </div>
             <Image
               src={slide.avatar}
               alt="Avatar"
@@ -152,7 +155,7 @@ const AboutStudio = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index} className="about-studio__slide-nav">
-              <img src={slide.img} alt="Navigation Photo" />
+              <Image src={slide.img} alt="Navigation Photo" width={47} height={47} unoptimized />
             </SwiperSlide>
           ))}
         </Swiper>

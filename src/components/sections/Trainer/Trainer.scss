@@ -1,22 +1,21 @@
-/*----------------------------partners__---------------------------*/
-.partners {
+/*----------------------------trainers__---------------------------*/
+.trainers {
   position: relative;
   background-color: #fff;
   z-index: 1;
   overflow: hidden;
   &__slide {
-    background-color: #fff;
     position: relative;
     &.swiper-slide-active {
-      .partners__slide-info,
-      .partners__slide-img {
+      .trainers__slide-info,
+      .trainers__slide-img {
         opacity: 1;
         transform: translateX(0) scale(1);
       }
-      .partners__slide-info {
+      .trainers__slide-info {
         transition-delay: 0.15s;
       }
-      .partners__slide-img {
+      .trainers__slide-img {
         transition-delay: 0.25s;
       }
     }
@@ -39,11 +38,16 @@
     width: 100%;
     height: 550px;
     transform: translate(0, -50%);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__slide-img {
     opacity: 0;
-    max-height: 100%;
+    height: 100%;
     max-width: 100%;
     transform: translateX(-40px) scale(1.03);
     transition:
@@ -90,7 +94,7 @@
         margin-bottom: 24px;
       }
     }
-    .btn-black {
+    .btn {
       position: absolute;
       bottom: -45px;
       left: 30px;

@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectFade } from 'swiper/modules';
 import SwiperCore from 'swiper';
-import Link from 'next/link';
 import Image from 'next/image';
 
 import 'swiper/css';
@@ -12,6 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import './Trainer.scss';
+import { Button } from '@/components/ui/Button';
 
 export const Trainer = () => {
   const swiperRef = useRef<SwiperCore | null>(null);
@@ -23,7 +23,16 @@ export const Trainer = () => {
   }, []);
 
   return (
-    <section className="partners">
+    <section className="trainers">
+      <div className="trainers__slide-bg">
+        <Image
+          src="/partner-slide-bg.jpg"
+          alt="background"
+          width={1920}
+          height={549}
+          quality={90}
+        />
+      </div>
       <Swiper
         modules={[Navigation, Pagination, EffectFade]}
         spaceBetween={0}
@@ -45,33 +54,34 @@ export const Trainer = () => {
         grabCursor={true}
         speed={800}
         loop
-        className="partners__slider"
+        className="trainers__slider"
       >
         {slidesTrainer.map((slide, index) => (
-          <SwiperSlide key={index} className="partners__slide">
-            <div
-              className="partners__slide-bg"
-              style={{ backgroundImage: 'url(/partner-slide-bg.jpg)' }}
-            />
-            <div className="partners__slide-item p-block min-h">
-              <img className="partners__slide-img" src={slide.img} alt={slide.name} />
-              <div className="partners__slide-info-cover">
-                <div className="partners__slide-info">
+          <SwiperSlide key={index} className="trainers__slide">
+            <div className="trainers__slide-item p-block min-h">
+              <Image
+                className="trainers__slide-img"
+                src={slide.img.src}
+                alt={slide.name}
+                width={slide.img.width}
+                height={slide.img.height}
+                quality={90}
+              />
+              <div className="trainers__slide-info-cover">
+                <div className="trainers__slide-info">
                   <div className="title text-lg">Мене звуть</div>
                   <div className="name h4">{slide.name}</div>
                   <div className="text-wrap" dangerouslySetInnerHTML={{ __html: slide.text }}></div>
-                  <Link href="/schedule" className="btn btn-black">
-                    <svg className="border">
-                      <rect pathLength="1" />
-                    </svg>
-                    <span>Записатися на заняття</span>
-                  </Link>
+
+                  <Button href="#" color="black">
+                    Записатися на заняття
+                  </Button>
                 </div>
               </div>
             </div>
           </SwiperSlide>
         ))}
-        <div className="partners__navigation slider-navigation">
+        <div className="trainers__navigation slider-navigation">
           <span className="arrow-prev arrow">
             <Image src="/arrow-left.png" alt="Arrow previous" width={59} height={10} />
           </span>

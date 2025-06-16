@@ -85,6 +85,7 @@ export default function Directions({
                   alt={title}
                   width={880}
                   height={1024}
+                  quality={90}
                 />
               </div>
             </SwiperSlide>
