@@ -1,7 +1,7 @@
 .faq {
   background-color: #1c1d21;
   color: #fff;
-  padding-top: 60px;
+  padding-top: 100px;
   padding-bottom: 100px;
   z-index: 1;
   .img {
@@ -11,6 +11,11 @@
     max-height: 100%;
     max-width: 60%;
     z-index: -1;
+    object-fit: contain;
+    object-position: bottom right;
+    @media (max-width: 1680px) {
+      max-width: 54%;
+    }
   }
   h2 {
     text-transform: uppercase;

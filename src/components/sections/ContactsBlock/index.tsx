@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import './ContactsBlock.scss';
 
-export const ContactsBlock = () => {
+const ContactsBlock = () => {
   return (
     <section className="contacts min-h">
       <div className="contacts__left p-block">
@@ -30,9 +30,17 @@ export const ContactsBlock = () => {
       </div>
       <div className="contacts__right">
         <div id="map" className="map">
-          <Image src="/google-map.png" alt="map" fill quality={90} />
+          <Image
+            src="/google-map.png"
+            alt="map"
+            fill
+            quality={90}
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
       </div>
     </section>
   );
 };
+
+export default ContactsBlock;

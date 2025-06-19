@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import './TabsSection.scss';
 import { SectionData } from '@/types/firstMeeting';
-import { Button } from '@/components/ui/Button';
+import Button from '@/components/ui/Button';
 
 const TabsSection = ({ className, imagesBlock, ...props }: SectionData) => {
   const [tabActive, setTabActive] = useState<number>(0);
@@ -45,9 +45,7 @@ const TabsSection = ({ className, imagesBlock, ...props }: SectionData) => {
         </ul>
         {props.button && (
           <div className="btn-cover">
-            <Button href={props.button.link} color="white">
-              {props.button.text}
-            </Button>
+            <Button color="white">{props.button.text}</Button>
           </div>
         )}
       </div>

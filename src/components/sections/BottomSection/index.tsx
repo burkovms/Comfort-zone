@@ -35,16 +35,23 @@ export const BottomSection = () => {
         <div className="s-bottom__item">
           <h2 className="h5">Завантаж мобільний додаток</h2>
           <div className="s-bottom__item-market">
-            <img className="s-bottom__phone-img" src="/phone-bottom.png" alt="Phone" />
+            <Image
+              className="s-bottom__phone-img"
+              src="/phone-bottom.png"
+              alt="Phone"
+              width={249}
+              height={515}
+              quality={90}
+            />
             <ul>
               <li>
                 <a href="#">
-                  <img src="/app-store.png" alt="App store" />
+                  <img src="/app-store.png" alt="App store" loading="lazy" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="/google-play.png" alt="Google playmarket" />
+                  <img src="/google-play.png" alt="Google playmarket" loading="lazy" />
                 </a>
               </li>
             </ul>

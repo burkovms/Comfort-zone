@@ -1,18 +1,15 @@
 'use client';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-
 import './Accordeon.scss';
 
-export const AccordeonItem = ({
-  question,
-  answer,
-  number,
-}: {
+type Props = {
   question: string;
   answer: string;
   number: string;
-}) => {
+};
+
+export const AccordeonItem = ({ question, answer, number }: Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const handleOpen = () => {
     setIsOpen(!isOpen);

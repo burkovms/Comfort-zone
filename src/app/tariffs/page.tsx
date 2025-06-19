@@ -5,7 +5,7 @@ import { tariffs } from '@/data/tariffs';
 
 export const TariffsPage = () => {
   return (
-    <section className="tariffs p-block">
+    <section className="page-container tariffs p-block">
       <h1>Тарифи</h1>
       <div className="tariffs__wrap">
         {tariffs.map(tariff => (

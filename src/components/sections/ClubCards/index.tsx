@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import './ClubCards.scss';
 import { useState } from 'react';
-import { Button } from '@/components/ui/Button';
+import Button from '@/components/ui/Button';
 
 export const ClubCards = () => {
   const newTariff = tariffs.filter(item => item.homeVisible);
@@ -22,7 +22,7 @@ export const ClubCards = () => {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true, amount: 1 }}
-          transition={{ duration: 0.35, ease: 'easeOut' }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
         >
           Клубні картки
         </motion.h2>
@@ -46,24 +46,14 @@ export const ClubCards = () => {
           {newTariff.map((tariff, index) =>
             isActive === index ? (
               <motion.div
+                layout
                 key={tariff.slug}
                 className="club-cards__item"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.35, ease: 'easeOut' }}
-                // key={index}
-                // className={`club-cards__item ${isActive === index ? 'active' : ''}`}
               >
-                <ul className="navigation">
-                  <li
-                    key={index}
-                    className={`item ${isActive === index ? 'active' : ''}`}
-                    onClick={() => handleActive(index)}
-                  >
-                    <span className="text-lg">«{tariff.name}»</span>
-                  </li>
-                </ul>
                 <motion.div
                   initial="hidden"
                   animate="visible"
@@ -76,7 +66,7 @@ export const ClubCards = () => {
                       visible: { opacity: 1, x: 0 },
                       exit: { opacity: 0, x: 40 },
                     }}
-                    transition={{ delay: 0.1, duration: 0.25 }}
+                    transition={{ delay: 0.1, duration: 0.2 }}
                   >
                     <div className="club-cards__item-imgs">
                       <Image
@@ -102,7 +92,7 @@ export const ClubCards = () => {
                         visible: { opacity: 1, x: 0 },
                         exit: { opacity: 0, x: 40 },
                       }}
-                      transition={{ delay: 0.2, duration: 0.25 }}
+                      transition={{ delay: 0.2, duration: 0.2 }}
                     >
                       <div className="title text-lg">Абонемент</div>
                       <h4 className="name">«{tariff.name}»</h4>
@@ -117,7 +107,7 @@ export const ClubCards = () => {
                         visible: { opacity: 1, x: 0 },
                         exit: { opacity: 0, x: 40 },
                       }}
-                      transition={{ delay: 0.3, duration: 0.25 }}
+                      transition={{ delay: 0.3, duration: 0.2 }}
                     >
                       <Button href={`/tariffs/${tariff.slug}`} color="black">
                         Дізнатись подробиці

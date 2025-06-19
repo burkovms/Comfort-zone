@@ -1,3 +1,4 @@
+import ContactsBlock from '@/components/sections/ContactsBlock';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -5,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 const Contacts = () => {
-  return <h1 className="p-block">Contacts</h1>;
+  return <ContactsBlock />;
 };
 
 export default Contacts;

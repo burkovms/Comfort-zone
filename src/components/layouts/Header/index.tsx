@@ -18,7 +18,7 @@ const headerData = {
       prefetch: false,
     },
     {
-      src: '/programms',
+      src: '/programs',
       name: 'Програми',
       prefetch: true,
     },

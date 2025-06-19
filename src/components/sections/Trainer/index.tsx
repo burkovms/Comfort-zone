@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import './Trainer.scss';
-import { Button } from '@/components/ui/Button';
+import Button from '@/components/ui/Button';
 
 export const Trainer = () => {
   const swiperRef = useRef<SwiperCore | null>(null);
@@ -57,8 +57,8 @@ export const Trainer = () => {
         className="trainers__slider"
       >
         {slidesTrainer.map((slide, index) => (
-          <SwiperSlide key={index} className="trainers__slide">
-            <div className="trainers__slide-item p-block min-h">
+          <SwiperSlide key={index} className="trainers__slide p-block">
+            <div className="trainers__slide-item">
               <Image
                 className="trainers__slide-img"
                 src={slide.img.src}

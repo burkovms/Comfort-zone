@@ -1,0 +1,138 @@
+.promotions {
+  &__container {
+    margin-top: 50px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -24px;
+    margin-right: -24px;
+    row-gap: 30px;
+  }
+}
+
+.promotion {
+  &__col {
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 33.33%;
+    &.lg {
+      width: 66.66%;
+      .promotion__item img {
+        right: 2%;
+      }
+    }
+  }
+  &__item {
+    min-height: 426px;
+    transition:
+      box-shadow 0.3s ease,
+      transform 0.4s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1);
+      img {
+        transform: scale(1.03);
+      }
+      .info {
+        .btn-wrap {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+
+    img {
+      max-height: 80%;
+      max-width: 70%;
+      position: absolute;
+      bottom: 0;
+      right: -10%;
+      transition: transform 0.4s ease;
+    }
+    .info {
+      .cover {
+        max-width: 430px;
+      }
+      p {
+        font-weight: 300;
+        letter-spacing: 0.07em;
+        max-width: 260px;
+      }
+      .btn-wrap {
+        opacity: 0;
+        transform: translateX(-40px);
+        transition:
+          opacity 0.4s ease-out 0.2s,
+          transform 0.4s ease-out 0.2s;
+      }
+    }
+  }
+}
+
+.promotion-item {
+  position: relative;
+  background-color: #f8f8f8;
+  padding: 24px;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  &.dark {
+    background-color: #1c1d21;
+    color: #fff;
+  }
+  .info {
+    width: 100%;
+    position: relative;
+    border: 1px solid #cdccb4;
+    padding: 20px 24px;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    .title {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      letter-spacing: 0.07em;
+    }
+  }
+}
+
+.promotion-detail {
+  &__item {
+    min-height: 680px;
+    margin-top: 60px;
+    img {
+      position: absolute;
+      max-height: 90%;
+      max-width: 56%;
+      bottom: 0;
+      right: 3%;
+    }
+    .info {
+      .cover {
+        max-width: 910px;
+      }
+      .slogan {
+        font-weight: 300;
+        margin-bottom: 30px;
+      }
+      .text {
+        font-family: Open Sans;
+        font-weight: 300;
+        color: #9f9f9f;
+        max-width: 430px;
+        margin-bottom: 20px;
+      }
+      .period {
+        font-family: Open Sans;
+        font-weight: 700;
+        font-size: 24px;
+        color: #9f9f9f;
+      }
+    }
+  }
+}

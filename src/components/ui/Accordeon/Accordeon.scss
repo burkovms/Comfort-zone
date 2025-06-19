@@ -3,11 +3,15 @@
   margin-top: 60px;
   position: relative;
   z-index: 1;
+  @media (max-width: 1680px) {
+    max-width: 480px;
+  }
   li {
     + li {
       margin-top: 20px;
     }
     .number {
+      display: block;
       font-family: Open Sans;
       font-weight: 800;
       letter-spacing: 0.07em;
@@ -23,10 +27,12 @@
       }
     }
     .title {
-      line-height: 24px;
+      display: inline-flex;
+      line-height: 1.35;
       text-decoration: underline dotted;
       cursor: pointer;
       padding-bottom: 10px;
+      user-select: none;
       transition: 0.3s ease;
       &:hover {
         text-decoration: none;
@@ -34,7 +40,7 @@
     }
     p {
       font-family: Open Sans;
-      line-height: 20px;
+      line-height: 1.35;
       color: #9f9f9f;
     }
   }

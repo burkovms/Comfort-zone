@@ -68,7 +68,7 @@ export default function Directions({
         >
           {slides.map((slide, i) => (
             <SwiperSlide key={i} className="directions__slide p-block">
-              <div className="directions__slide-cover min-h">
+              <div className="directions__slide-cover">
                 <div className="directions__slide-info">
                   <h2 className="title">{title}</h2>
                   <p className="h4 slogan">{slogan}</p>

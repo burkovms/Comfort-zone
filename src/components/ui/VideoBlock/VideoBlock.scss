@@ -1,0 +1,75 @@
+.video-block {
+  flex-shrink: 0;
+  position: relative;
+  aspect-ratio: 18 / 9;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    .play {
+      opacity: 1;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .poster img {
+      transform: scale(1.01);
+      opacity: 0.95;
+    }
+  }
+
+  &:active {
+    .play {
+      transform: translate(-50%, -50%) scale(0.95);
+    }
+  }
+
+  .play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 2;
+    border-radius: 50%;
+    // border: 4px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+    svg {
+      width: 96px;
+      height: 96px;
+    }
+  }
+
+  .poster {
+    background-color: #ddd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition:
+        transform 0.6s ease,
+        opacity 0.4s ease;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: #1c1d21;
+      opacity: 0.4;
+      transition: background 0.4s ease;
+    }
+  }
+}

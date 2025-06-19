@@ -2,7 +2,7 @@ import { tariffs } from '@/data/tariffs';
 import { notFound } from 'next/navigation';
 import { LinkArror } from '@/components/ui/LinkArror';
 import './TariffDetail.scss';
-import { Button } from '@/components/ui/Button';
+import Button from '@/components/ui/Button';
 
 type Props = {
   params: { slug: string };

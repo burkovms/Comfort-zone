@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  height: 100vh;
   &__right,
   &__left {
     width: 50%;
@@ -12,9 +13,15 @@
     padding-right: 60px;
     display: flex;
     align-items: center;
+    @media (max-width: 1680px) {
+      width: 55%;
+    }
   }
   &__right {
     position: relative;
+    @media (max-width: 1680px) {
+      width: 45%;
+    }
     .map {
       background-color: #ccc;
       position: absolute;
@@ -23,6 +30,7 @@
       width: 100%;
       height: 100%;
       img {
+        object-fit: cover;
         position: absolute;
         top: 0;
         left: 0;

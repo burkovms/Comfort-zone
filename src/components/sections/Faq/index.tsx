@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { AccordeonItem } from '@/components/ui/Accordeon';
 import { faqItems } from './data';
-import { Button } from '@/components/ui/Button';
+import Button from '@/components/ui/Button';
 import './Faq.scss';
 
 export const Faq = () => {
@@ -32,9 +32,7 @@ export const Faq = () => {
       <div className="faq-specialist">
         <div className="name h5">Марія Шевченко</div>
         <div className="prof">Провідний тренер «Зони комфорта»</div>
-        <Button href="#" color="white">
-          Задати питання
-        </Button>
+        <Button color="white">Задати питання</Button>
       </div>
     </section>
   );

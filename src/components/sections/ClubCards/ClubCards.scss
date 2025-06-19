@@ -2,12 +2,16 @@
   background-color: #fff;
   padding-top: 60px;
   padding-bottom: 60px;
+  padding-right: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 100px;
+  @media (max-width: 1680px) {
+    padding-right: 60px;
+  }
   .btn-gold {
-    margin-top: 62px;
+    margin-top: 60px;
     &.mobile-visible {
       display: none;
     }
@@ -16,22 +20,28 @@
     max-width: 430px;
     width: 100%;
     text-align: center;
+    @media (max-width: 1680px) {
+      max-width: 390px;
+    }
     h2 {
       text-transform: uppercase;
       color: #1c1d21;
       text-align: left;
-      margin-bottom: 43px;
+      margin-bottom: 40px;
     }
   }
+
   &__right {
-    padding-right: 5%;
+    @media (max-width: 1680px) {
+      max-width: 480px;
+    }
   }
 
   .navigation {
     li {
       position: relative;
       cursor: pointer;
-      min-height: 100px;
+      height: 100px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -40,6 +50,9 @@
       border-bottom: 1px solid #dbdbdb;
       user-select: none;
       transition: 0.3s ease-in-out;
+      @media (max-width: 1680px) {
+        height: 80px;
+      }
       &:hover {
         color: #231f20;
       }
@@ -81,12 +94,6 @@
       position: relative;
       z-index: 1;
     }
-    .navigation {
-      display: none;
-      @media (max-width: 767px) {
-        display: flex;
-      }
-    }
     .title {
       font-family: Open Sans;
       font-weight: 300;
@@ -110,7 +117,7 @@
       font-family: Open Sans;
       font-weight: 700;
       display: block;
-      margin-bottom: 42px;
+      margin-bottom: 40px;
     }
   }
   &__item-content {

@@ -123,8 +123,8 @@ const AboutStudio = () => {
               height={154}
             />
             <div className="about-studio__info">
-              <div className="name">{slide.name}</div>
-              <div className="prof">{slide.profile}</div>
+              <div className="name text-sm">{slide.name}</div>
+              <div className="prof text-sm">{slide.profile}</div>
               <p>{slide.text}</p>
             </div>
           </SwiperSlide>

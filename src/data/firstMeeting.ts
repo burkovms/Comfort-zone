@@ -44,6 +44,5 @@ export const firstMeeting: SectionData = {
   ],
   button: {
     text: 'Записатися на пробне відвідування',
-    link: '#',
   },
 };
