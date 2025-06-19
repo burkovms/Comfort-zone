@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Promotions',
 };
 
-export const Promotions = () => {
+const Promotions = () => {
   return (
     <section id="promotions" className="page-container p-block">
       <h1>Акції та знижки</h1>
