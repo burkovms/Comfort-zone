@@ -2,14 +2,10 @@ import { notFound } from 'next/navigation';
 import { programCategories } from '@/data/programs';
 import './ProgramDetail.scss';
 
-type Props = {
-  params: { slug: string };
-};
-
 const findProgramBySlug = (slug: string) =>
   programCategories.flatMap(category => category.programs).find(program => program.slug === slug);
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: { params: { slug: string } }) {
   const { slug } = await params;
   const program = findProgramBySlug(slug);
 
@@ -29,7 +25,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export default async function TariffDetail({ params }: Props) {
+export default async function TariffDetail({ params }: { params: { slug: string } }) {
   const { slug } = await params;
   const program = findProgramBySlug(slug);
 

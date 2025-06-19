@@ -4,11 +4,11 @@ import { LinkArror } from '@/components/ui/LinkArror';
 import './TariffDetail.scss';
 import Button from '@/components/ui/Button';
 
-type Props = {
-  params: { slug: string };
-};
+// type Props = {
+//   params: { slug: string };
+// };
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: { params: { slug: string } }) {
   const { slug } = await params;
   const tariff = tariffs.find(item => item.slug === slug);
 
@@ -26,7 +26,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function TariffDetail({ params }: Props) {
+export default async function TariffDetail({ params }: { params: { slug: string } }) {
   const { slug } = await params;
 
   const tariff = tariffs.find(item => item.slug === slug);
