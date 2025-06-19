@@ -39,14 +39,19 @@
 // }
 import { notFound } from 'next/navigation';
 import { programCategories } from '@/data/programs';
+import { getSlug } from '@/lib/helpers';
 
-export default async function ProgramDetail({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function ProgramDetail({
+  params,
+}: { params: { slug: string } } | { params: Promise<{ slug: string }> }) {
+  const { slug } = await getSlug(params);
+
   const program = programCategories
     .flatMap(category => category.programs)
     .find(program => program.slug === slug);
 
   if (!program) return notFound();
+
   return (
     <div className="page-container p-block">
       <h1>{program.title}</h1>
