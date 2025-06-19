@@ -3,7 +3,7 @@ import Image from 'next/image';
 import './Tariffs.scss';
 import { tariffs } from '@/data/tariffs';
 
-export const TariffsPage = () => {
+const TariffsPage = () => {
   return (
     <section className="page-container tariffs p-block">
       <h1>Тарифи</h1>
