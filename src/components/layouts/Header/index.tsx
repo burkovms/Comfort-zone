@@ -2,7 +2,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import dynamic from 'next/dynamic';
+const Modal = dynamic(() => import('@/components/ui/Modal'));
+import Form from '@/components/ui/Form';
 import { motion } from 'motion/react';
+import { useState } from 'react';
+
 import './Header.scss';
 
 const headerData = {
@@ -10,17 +15,14 @@ const headerData = {
     {
       src: '/promotions',
       name: 'Акції',
-      prefetch: true,
     },
     {
       src: '/tariffs',
       name: 'Тарифи',
-      prefetch: false,
     },
     {
       src: '/programs',
       name: 'Програми',
-      prefetch: true,
     },
     // {
     //   src: '/schedule',
@@ -33,18 +35,18 @@ const headerData = {
     {
       src: '/about',
       name: 'Про клуб',
-      prefetch: true,
     },
     {
       src: '/contacts',
       name: 'Контакти',
-      prefetch: true,
     },
   ],
   phone: '8 800 665 54 33',
 };
 
 export const Header = () => {
+  const [openModal, setOpenModal] = useState(false);
+
   const pathname = usePathname();
 
   return (
@@ -65,11 +67,7 @@ export const Header = () => {
               <ul className="nav-list">
                 {headerData.navigation.map((item, index) => (
                   <li key={index}>
-                    <Link
-                      href={item.src}
-                      prefetch={item.prefetch}
-                      className={pathname === item.src ? 'active' : ''}
-                    >
+                    <Link href={item.src} className={pathname === item.src ? 'active' : ''}>
                       <span>{item.name}</span>
                     </Link>
                   </li>
@@ -80,12 +78,12 @@ export const Header = () => {
               <a className="menu-phone text-lg" href={`tel:${headerData.phone.replace(/\s/g, '')}`}>
                 {headerData.phone}
               </a>
-              <a href="#" className="popup-open menu-btn">
+              <button onClick={() => setOpenModal(true)} className="menu-btn">
                 <span className="btn-img">
                   <Image src="/nav-btn.png" alt="Navigation Button" width={49} height={52} />
                 </span>
                 <p>вмикайся</p>
-              </a>
+              </button>
             </div>
           </div>
         </motion.div>
@@ -104,11 +102,16 @@ export const Header = () => {
           <a className="phone-mobile" href={`tel:${headerData.phone.replace(/\s/g, '')}`}>
             {headerData.phone}
           </a>
+
           <a href="#" className="popup-open mobile-btn-popup">
             вмикайся
           </a>
         </div>
       </div>
+
+      <Modal isOpen={openModal} onClose={() => setOpenModal(false)} image="/popup-img.png">
+        <Form />
+      </Modal>
     </>
   );
 };

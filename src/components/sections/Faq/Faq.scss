@@ -13,6 +13,7 @@
     z-index: -1;
     object-fit: contain;
     object-position: bottom right;
+    mix-blend-mode: lighten;
     @media (max-width: 1680px) {
       max-width: 54%;
     }

@@ -1,0 +1,60 @@
+:root {
+  --swiper-navigation-size: 34px;
+  --swiper-theme-color: #cdccb4;
+}
+
+.thumb-slider {
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .slider-for {
+    .video-block,
+    img {
+      height: 352px;
+    }
+  }
+  .slider-nav {
+    margin-top: 8px;
+    img {
+      height: 115px;
+      transition: opacity 0.3s ease-out;
+    }
+    .swiper-slide {
+      cursor: pointer;
+      position: relative;
+      background-color: #1c1d21;
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        border: 1px solid #cdccb4;
+        inset: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease-out;
+      }
+      &-thumb-active {
+        &:before {
+          inset: 4px;
+          opacity: 1;
+        }
+      }
+      &:hover {
+        &:not(.swiper-slide-thumb-active) {
+          img {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: var(--swiper-navigation-size);
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

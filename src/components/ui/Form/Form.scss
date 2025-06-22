@@ -1,0 +1,93 @@
+.form-wrap {
+  max-width: 500px;
+  display: flex;
+  .slogan {
+    font-family: Open Sans;
+    font-weight: 300;
+    margin-top: 24px;
+  }
+}
+
+.form {
+  &__list {
+    margin-top: 80px;
+    li {
+      + li {
+        margin-top: 70px;
+      }
+      .error-text {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 2px;
+        color: #db4e4e;
+        font-family: Open Sans;
+      }
+    }
+  }
+
+  .terms {
+    text-align: center;
+    font-family: Open Sans;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.7;
+    margin-top: 50px;
+    a {
+      color: #fff;
+      text-decoration: underline;
+      &:hover {
+        color: #cdccb4;
+      }
+    }
+  }
+
+  .btn-wrap {
+    margin-top: 70px;
+    .btn {
+      width: calc(100% + 20px);
+    }
+  }
+}
+
+.thank-you-form {
+  margin: auto;
+  .text {
+    margin-top: 10px;
+    font-family: Open Sans;
+    font-weight: 300;
+    opacity: 0.7;
+  }
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: Open Sans;
+  font-size: inherit;
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+  height: 40px;
+  transition: 0.3s ease;
+  &:hover {
+    border-color: #fff;
+  }
+  &:focus {
+    border-color: #cdccb4;
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    transition: 0.3s ease;
+  }
+  &.error {
+    border-color: #db4e4e;
+  }
+}

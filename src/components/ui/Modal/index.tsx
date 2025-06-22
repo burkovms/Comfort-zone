@@ -4,12 +4,13 @@ import { useEffect } from 'react';
 import styles from './Modal.module.scss';
 
 type Props = {
+  image?: string;
   isOpen: boolean;
   children: React.ReactNode;
   onClose: () => void;
 };
 
-export const Modal = ({ children, isOpen, onClose }: Props) => {
+const Modal = ({ children, image, isOpen, onClose }: Props) => {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -37,6 +38,7 @@ export const Modal = ({ children, isOpen, onClose }: Props) => {
           <div onClick={onClose} className={`${styles.close} text-lg`}>
             Закрити
           </div>
+          {image && <img src={image} alt="Background" className={styles.img}></img>}
           <div className={styles.wrap}>{children}</div>
         </div>,
         document.body,
@@ -44,3 +46,5 @@ export const Modal = ({ children, isOpen, onClose }: Props) => {
     </>
   );
 };
+
+export default Modal;

@@ -27,7 +27,7 @@ export default function Home() {
 
       <Directions
         slides={slidesTwo}
-        title="Напружений і відчуваєш втому?"
+        title="Напружений та відчуваєш втому?"
         slogan="Отримай релакс і короткий сон"
         titleForDescription="Що це таке"
         bg="dark"

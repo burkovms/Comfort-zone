@@ -2,7 +2,8 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import './VideoBlock.scss';
-import { Modal } from '../Modal';
+import dynamic from 'next/dynamic';
+const Modal = dynamic(() => import('../Modal'));
 
 export const VideoBlock = ({
   posterUrl,
