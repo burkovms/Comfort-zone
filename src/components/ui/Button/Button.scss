@@ -57,11 +57,16 @@
       padding-left: 24px;
       padding-right: 24px;
       height: 64px;
+      @media (max-width: 1280px) {
+        height: 56px;
+      }
     }
   }
 
   &-sm {
     font-size: 12px;
+    padding: 6px;
+    margin-left: -6px;
     span {
       height: 44px;
       padding-left: 12px;

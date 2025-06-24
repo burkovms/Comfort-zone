@@ -7,6 +7,13 @@
   &__slide-for {
     padding-top: 125px;
     position: relative;
+    @media (max-width: 1280px) {
+      padding-top: 60px;
+      padding-right: 30px;
+    }
+    @media (max-width: 575px) {
+      padding-right: 20px;
+    }
     &.swiper-slide-active {
       .about-studio__photo {
         opacity: 1;
@@ -36,12 +43,21 @@
     padding: 10px;
     background-color: #fff;
     max-width: 355px;
+    @media (max-width: 1024px) {
+      padding: 5px;
+    }
+    @media (max-width: 575px) {
+      max-width: 300px;
+    }
   }
   &__slide-nav {
     padding: 10px;
     cursor: grab;
     opacity: 0.6;
     transition: opacity 0.25s ease;
+    @media (max-width: 1024px) {
+      padding: 5px;
+    }
     &:hover {
       opacity: 1;
     }
@@ -49,7 +65,7 @@
       cursor: grabbing;
     }
     &.swiper-slide-thumb-active {
-      transform: scale(1.2);
+      transform: scale(1.1);
       opacity: 1;
     }
     img {
@@ -67,7 +83,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 53px;
+    margin-bottom: 50px;
     position: relative;
     z-index: 1;
     opacity: 0;
@@ -76,19 +92,26 @@
       opacity 0.35s;
     display: block;
     transform: translateX(-40px);
+    @media (max-width: 1280px) {
+      width: 114px;
+      height: 114px;
+    }
   }
   &__info {
     background-color: #fff;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
     max-width: 430px;
     width: 100%;
-    padding: 28px 30px;
+    padding: 24px;
     position: relative;
     opacity: 0;
     transition:
       transform 0.5s ease-in-out 0.1s,
       opacity 0.4s ease-in-out 0.15s;
     transform: translateX(-30px);
+    @media (max-width: 1024px) {
+      padding: 15px 20px;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -98,6 +121,10 @@
       height: 0;
       border-bottom: 38px solid #fff;
       border-right: 38px solid transparent;
+      @media (max-width: 1024px) {
+        border-width: 24px;
+        left: 60px;
+      }
     }
     .name {
       font-weight: bold;
@@ -108,8 +135,11 @@
     .prof {
       font-family: Open Sans;
       color: #1c1d21;
-      margin-bottom: 25px;
+      margin-bottom: 24px;
       margin-top: 3px;
+      @media (max-width: 1024px) {
+        margin-bottom: 16px;
+      }
     }
     p {
       font-family: Open Sans;
@@ -165,6 +195,9 @@
       display: flex;
       align-items: center;
       transition: 0.3s ease-in-out;
+      @media (max-width: 1024px) {
+        height: 44px;
+      }
       &-prev {
         &:hover {
           transform: translateX(-4px);

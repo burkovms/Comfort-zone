@@ -18,6 +18,9 @@ body {
   font-family: $font_family;
   min-width: 320px;
   overflow-x: hidden;
+  @media (max-width: 1440px) {
+    font-size: 16px;
+  }
   &.no-scroll {
     overflow: hidden;
   }
@@ -44,17 +47,16 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  a {
+    color: #1c1d21;
+    &:hover {
+      color: #cdccb4;
+    }
+  }
 }
 
 h1,
-.h1 {
-  font-size: 66px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  @media (max-width: 1680px) {
-    font-size: 44px;
-  }
-}
+.h1,
 h2,
 .h2 {
   font-size: 66px;
@@ -63,12 +65,30 @@ h2,
   @media (max-width: 1680px) {
     font-size: 44px;
   }
+  @media (max-width: 1280px) {
+    font-size: 40px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 32px;
+  }
+  @media (max-width: 575px) {
+    font-size: 28px;
+  }
 }
 h3,
 .h3 {
   font-size: 50px;
   @media (max-width: 1680px) {
     font-size: 36px;
+  }
+  @media (max-width: 1280px) {
+    font-size: 32px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 26px;
+  }
+  @media (max-width: 575px) {
+    font-size: 22px;
   }
 }
 h4,
@@ -78,17 +98,41 @@ h4,
   @media (max-width: 1680px) {
     font-size: 28px;
   }
+  @media (max-width: 1440px) {
+    font-size: 26px;
+  }
+  @media (max-width: 1280px) {
+    font-size: 24px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 22px;
+  }
+  @media (max-width: 575px) {
+    font-size: 20px;
+  }
 }
 h5,
 .h5 {
   font-size: 30px;
   @media (max-width: 1680px) {
-    font-size: 26px;
+    font-size: 24px;
+  }
+  @media (max-width: 1440px) {
+    font-size: 22px;
+  }
+  @media (max-width: 1440px) {
+    font-size: 20px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 18px;
   }
 }
 h6,
 .h6 {
   font-size: 18px;
+  @media (max-width: 1440px) {
+    font-size: 16px;
+  }
 }
 
 .text {
@@ -97,11 +141,20 @@ h6,
     @media (max-width: 1680px) {
       font-size: 22px;
     }
+    @media (max-width: 1440px) {
+      font-size: 20px;
+    }
+    @media (max-width: 575px) {
+      font-size: 18px;
+    }
   }
   &-lg {
     font-size: 20px;
     @media (max-width: 1680px) {
       font-size: 18px;
+    }
+    @media (max-width: 575px) {
+      font-size: 16px;
     }
   }
   &-md {

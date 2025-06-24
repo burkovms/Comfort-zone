@@ -19,6 +19,11 @@ export const Faq = () => {
       <p className="slogan text-xl">
         Я відповім на <strong>будь-які з них</strong>
       </p>
+      <div className="faq-specialist">
+        <div className="name h5">Марія Шевченко</div>
+        <div className="prof">Провідний тренер «Зони комфорта»</div>
+        <Button color="white">Задати питання</Button>
+      </div>
       <ul className="faq-wrap">
         {faqItems.map((item, index) => (
           <AccordeonItem
@@ -29,11 +34,6 @@ export const Faq = () => {
           />
         ))}
       </ul>
-      <div className="faq-specialist">
-        <div className="name h5">Марія Шевченко</div>
-        <div className="prof">Провідний тренер «Зони комфорта»</div>
-        <Button color="white">Задати питання</Button>
-      </div>
     </section>
   );
 };

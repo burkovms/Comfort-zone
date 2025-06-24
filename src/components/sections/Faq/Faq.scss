@@ -3,7 +3,14 @@
   color: #fff;
   padding-top: 100px;
   padding-bottom: 100px;
-  z-index: 1;
+  padding-right: 30px;
+  @media (max-width: 767px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @media (max-width: 575px) {
+    padding-right: 20px;
+  }
   .img {
     position: absolute;
     bottom: 0;
@@ -15,7 +22,18 @@
     object-position: bottom right;
     mix-blend-mode: lighten;
     @media (max-width: 1680px) {
-      max-width: 54%;
+      max-width: 55%;
+    }
+    @media (max-width: 1280px) {
+      max-width: 100%;
+      right: -100px;
+    }
+    @media (max-width: 767px) {
+      right: -30px;
+      bottom: auto;
+      top: 50px;
+      max-width: none;
+      width: 375px;
     }
   }
   h2 {
@@ -25,18 +43,38 @@
   .slogan {
     font-family: Open Sans;
     font-weight: 300;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
   }
 }
 
 .faq-specialist {
   position: absolute;
   right: 0;
-  bottom: 252px;
+  bottom: 22%;
   max-width: 480px;
   width: 100%;
   background-color: rgba(28, 29, 33, 0.8);
   padding: 24px 24px 68px;
   z-index: 3;
+  @media (max-width: 1440px) {
+    max-width: 380px;
+    padding-bottom: 48px;
+  }
+  @media (max-width: 900px) {
+    bottom: auto;
+    right: auto;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 26px;
+    max-width: 340px;
+    padding: 20px 20px 48px;
+  }
+  @media (max-width: 575px) {
+    max-width: 100%;
+    margin-top: 230px;
+  }
   .name {
     font-weight: 700;
     letter-spacing: 0.07em;
@@ -52,5 +90,8 @@
     left: 24px;
     max-width: 250px;
     width: 100%;
+    @media (max-width: 900px) {
+      bottom: -36px;
+    }
   }
 }

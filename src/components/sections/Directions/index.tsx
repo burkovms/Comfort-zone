@@ -70,8 +70,10 @@ export default function Directions({
             <SwiperSlide key={i} className="directions__slide p-block">
               <div className="directions__slide-cover">
                 <div className="directions__slide-info">
-                  <h2 className="title">{title}</h2>
-                  <p className="h4 slogan">{slogan}</p>
+                  <div>
+                    <h2 className="title">{title}</h2>
+                    <p className="h4 slogan">{slogan}</p>
+                  </div>
                   <div className="directions__slide-bottom">
                     <h6>
                       <span>{titleForDescription}</span>

@@ -3,25 +3,35 @@
   justify-content: space-between;
   align-items: stretch;
   height: 100vh;
-  &__right,
-  &__left {
-    width: 50%;
-    position: relative;
+  @media (max-width: 767px) {
+    flex-direction: column;
   }
   &__left {
-    padding-block: 60px;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
     padding-right: 60px;
     display: flex;
     align-items: center;
-    @media (max-width: 1680px) {
-      width: 55%;
+    min-width: 50%;
+    flex-shrink: 0;
+    @media (max-width: 1280px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-right: 30px;
+    }
+    @media (max-width: 767px) {
+      padding-top: 40px;
+      min-width: auto;
+      width: 100%;
+    }
+    @media (max-width: 575px) {
+      padding-right: 20px;
     }
   }
   &__right {
     position: relative;
-    @media (max-width: 1680px) {
-      width: 45%;
-    }
+    flex-grow: 1;
     .map {
       background-color: #ccc;
       position: absolute;
@@ -45,6 +55,9 @@
       margin-top: 60px;
       max-width: 340px;
       width: 100%;
+      @media (max-width: 767px) {
+        margin-top: 50px;
+      }
       li {
         + li {
           margin-top: 26px;
@@ -76,7 +89,7 @@
 }
 
 .btn-dowload {
-  margin-top: 62px;
+  margin-top: 60px;
   display: inline-flex;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -84,6 +97,9 @@
   text-transform: uppercase;
   color: #cdccb4;
   line-height: 1.5;
+  @media (max-width: 767px) {
+    margin-top: 40px;
+  }
   &:hover {
     transform: translateX(4px);
     text-decoration: none;

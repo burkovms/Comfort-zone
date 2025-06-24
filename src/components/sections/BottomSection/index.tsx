@@ -18,18 +18,6 @@ export const BottomSection = () => {
             <a href="#">Згода на обробку персональних даних</a>
           </li>
         </ul>
-        <div className="copyright-wrap">
-          <a href="#">
-            <Image
-              className="design"
-              src="/marketing-time.svg"
-              alt="Phone"
-              width={140}
-              height={28}
-              quality={90}
-            />
-          </a>
-        </div>
       </div>
       <div className="s-bottom__right">
         <div className="s-bottom__item">

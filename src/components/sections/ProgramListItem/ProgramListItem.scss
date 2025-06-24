@@ -19,10 +19,16 @@
     text-transform: uppercase;
     position: relative;
     z-index: 1;
+    @media (max-width: 1440px) {
+      min-height: 210px;
+    }
+    @media (max-width: 1024px) {
+      min-height: 160px;
+    }
     .title {
       letter-spacing: 0.07em;
       cursor: pointer;
-      margin-bottom: 7px;
+      margin-bottom: 6px;
       user-select: none;
       transition:
         color 0.3s ease-out,
@@ -44,7 +50,7 @@
   }
   &__container {
     max-width: 910px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
   }
 
   &__container-bg {

@@ -32,12 +32,12 @@ const Form = () => {
     <div className="form-wrap">
       {!sended ? (
         <form className="form" onSubmit={handleSubmit}>
-          <h5 className="title">
+          <h4 className="title">
             Вітаю!
             <br />
             Мене звати Марія
-          </h5>
-          <p className="slogan text-xl">
+          </h4>
+          <p className="slogan text-lg">
             Залиште свій номер телефону — я зателефоную вам і розповім усі деталі.
           </p>
 
@@ -81,8 +81,8 @@ const Form = () => {
         </form>
       ) : (
         <div className="thank-you-form">
-          <h5>Дякуємо!</h5>
-          <p className="slogan text-xl">Ваші дані успішно надіслані.</p>
+          <h4>Дякуємо!</h4>
+          <p className="slogan text-lg">Ваші дані успішно надіслані.</p>
           <p className="text">
             Найближчим часом я зателефоную вам і надам усю необхідну інформацію.
           </p>

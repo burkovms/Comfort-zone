@@ -46,12 +46,13 @@ const headerData = {
 
 export const Header = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const pathname = usePathname();
 
   return (
     <>
-      <div className="sidebar">
+      <div className={`sidebar ${isOpenMenu ? 'opened' : ''}`}>
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -59,7 +60,7 @@ export const Header = () => {
           className="nav-wrap"
         >
           <div className="nav-cover">
-            <div className="nav-btn-close"></div>
+            <div onClick={() => setIsOpenMenu(false)} className="nav-btn-close"></div>
             <Link href="/" className="logo">
               <Image src="/logo.png" alt="Logotype" width={146} height={219} unoptimized />
             </Link>
@@ -67,7 +68,11 @@ export const Header = () => {
               <ul className="nav-list">
                 {headerData.navigation.map((item, index) => (
                   <li key={index}>
-                    <Link href={item.src} className={pathname === item.src ? 'active' : ''}>
+                    <Link
+                      href={item.src}
+                      className={pathname === item.src ? 'active' : ''}
+                      onClick={() => setIsOpenMenu(false)}
+                    >
                       <span>{item.name}</span>
                     </Link>
                   </li>
@@ -89,8 +94,8 @@ export const Header = () => {
         </motion.div>
       </div>
 
-      <div className="nav-btn-wrap">
-        <button className="nav-btn">
+      <div className="nav-mobile">
+        <button onClick={() => setIsOpenMenu(true)} className="nav-btn">
           <span></span>
           <span></span>
           <span></span>
@@ -98,13 +103,12 @@ export const Header = () => {
         <Link href="/" className="logo-mobile">
           <Image src="/logo-mobile.svg" alt="mobile logotype" width={21} height={57} />
         </Link>
-        <div className="nav-btn-info">
+        <div className="nav-mobile__info">
+          <button onClick={() => setOpenModal(true)} className="nav-mobile__btn-modal-open">
+            вмикайся
+          </button>
           <a className="phone-mobile" href={`tel:${headerData.phone.replace(/\s/g, '')}`}>
             {headerData.phone}
-          </a>
-
-          <a href="#" className="popup-open mobile-btn-popup">
-            вмикайся
           </a>
         </div>
       </div>

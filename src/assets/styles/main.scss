@@ -70,12 +70,22 @@ section {
   @media (max-height: 800px) {
     bottom: 50px;
   }
+  @media (max-width: 1440px) {
+    bottom: 50px;
+  }
+  @media (max-width: 575px) {
+    bottom: 20px;
+  }
   .arrow {
     display: flex;
     align-items: center;
     height: 42px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    @media (max-width: 575px) {
+      width: 44px;
+      height: 38px;
+    }
     &-prev {
       &:hover {
         transform: translateX(-4px);
@@ -115,11 +125,18 @@ section {
     padding-right: 5px;
     min-width: 40px;
     font-size: 24px;
+    @media (max-width: 575px) {
+      min-width: 34px;
+      font-size: 20px;
+    }
   }
   .qty {
     padding-left: 8px;
     padding-top: 10px;
     font-size: 34px;
+    @media (max-width: 575px) {
+      font-size: 30px;
+    }
   }
 }
 
@@ -128,6 +145,12 @@ section {
   @media (max-width: 1680px) {
     padding-left: 390px;
   }
+  @media (max-width: 1280px) {
+    padding-left: 70px;
+  }
+  @media (max-width: 575px) {
+    padding-left: 50px;
+  }
 }
 
 .min-h {
@@ -135,10 +158,88 @@ section {
   @media (max-width: 1680px) {
     min-height: 900px;
   }
+  @media (max-width: 1280px) {
+    min-height: 768px;
+  }
 }
 
 .page-container {
   padding-top: 40px;
   padding-bottom: 100px;
   padding-right: 50px;
+  @media (max-width: 1280px) {
+    padding-right: 30px;
+    padding-bottom: 80px;
+  }
+  @media (max-width: 575px) {
+    padding-right: 20px;
+  }
+}
+
+// Single Page
+.single-page {
+  h1 {
+    @media (max-width: 575px) {
+      font-size: 24px;
+    }
+  }
+  &__wrap {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+    @media (max-width: 767px) {
+      margin-top: 24px;
+    }
+  }
+  &__left {
+    width: 66%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 50px;
+    gap: 50px;
+    @media (max-width: 1440px) {
+      gap: 50px 30px;
+      padding-right: 30px;
+    }
+    @media (max-width: 1024px) {
+      width: 100%;
+      padding-right: 0;
+    }
+    @media (max-width: 767px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+
+    .wrap,
+    .info {
+      max-width: 50%;
+      @media (max-width: 767px) {
+        max-width: 100%;
+      }
+    }
+  }
+  &__right {
+    border-left: 1px solid #c4c4c4;
+    padding-left: 50px;
+    width: 34%;
+    @media (max-width: 1440px) {
+      padding-left: 30px;
+    }
+    @media (max-width: 1024px) {
+      border-top: 1px solid #c4c4c4;
+      padding-top: 50px;
+      margin-top: 50px;
+      border-left: none;
+      width: 100%;
+      padding-left: 0;
+    }
+  }
 }

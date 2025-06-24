@@ -1,7 +1,7 @@
 .video-block {
   flex-shrink: 0;
   position: relative;
-  aspect-ratio: 18 / 9;
+  aspect-ratio: 16 / 9;
   width: 100%;
   overflow: hidden;
   cursor: pointer;
@@ -39,6 +39,10 @@
     svg {
       width: 96px;
       height: 96px;
+      @media (max-width: 1440px) {
+        width: 70px;
+        height: 70px;
+      }
     }
   }
 

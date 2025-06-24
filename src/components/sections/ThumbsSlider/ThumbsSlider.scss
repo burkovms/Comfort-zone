@@ -1,6 +1,9 @@
 :root {
   --swiper-navigation-size: 34px;
   --swiper-theme-color: #cdccb4;
+  @media (max-width: 1440px) {
+    --swiper-navigation-size: 26px;
+  }
 }
 
 .thumb-slider {
@@ -11,13 +14,15 @@
   .slider-for {
     .video-block,
     img {
-      height: 352px;
+      aspect-ratio: 16 / 9;
+      height: auto;
     }
   }
   .slider-nav {
     margin-top: 8px;
     img {
-      height: 115px;
+      aspect-ratio: 16 / 9;
+      height: auto;
       transition: opacity 0.3s ease-out;
     }
     .swiper-slide {
@@ -53,6 +58,7 @@
   .swiper-button-prev,
   .swiper-button-next {
     width: var(--swiper-navigation-size);
+
     &:active {
       transform: scale(0.9);
     }

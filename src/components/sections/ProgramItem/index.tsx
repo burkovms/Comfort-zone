@@ -1,4 +1,5 @@
 import Button from '@/components/ui/Button';
+import Link from 'next/link';
 import { VideoBlock } from '@/components/ui/VideoBlock';
 import { Program } from '@/types/programs';
 import styles from './ProgramItem.module.scss';
@@ -11,12 +12,14 @@ export const ProgramItem = ({ props }: { props: Program }) => {
       </div>
       <div className={styles.info}>
         <div>
-          <h6 className="text-lg">{props.title}</h6>
+          <h6 className="text-lg">
+            <Link href={`/programs/${props.slug}`}>{props.title}</Link>
+          </h6>
           <p>{props.description}</p>
         </div>
         <div className={styles.btnWrap}>
           <Button href={`/programs/${props.slug}`} color="black" size="sm">
-            Читати далі
+            Дізнатись більше
           </Button>
         </div>
         {props.extra && (

@@ -37,9 +37,11 @@ export const ClubCards = () => {
             </li>
           ))}
         </ul>
-        <Link href="/tariffs" className="btn-gold">
-          <span>Показати все</span>
-        </Link>
+        <div className="desktop-visible">
+          <Link href="/tariffs" className="btn-gold ">
+            <span>Показати все</span>
+          </Link>
+        </div>
       </div>
       <div className="club-cards__right">
         <AnimatePresence mode="wait">
@@ -120,9 +122,11 @@ export const ClubCards = () => {
           )}
         </AnimatePresence>
       </div>
-      <Link href="/tariffs" className="btn-gold mobile-visible">
-        <span>Показати все</span>
-      </Link>
+      <div className="mobile-visible">
+        <Link href="/tariffs" className="btn-gold ">
+          <span>Показати все</span>
+        </Link>
+      </div>
     </section>
   );
 };

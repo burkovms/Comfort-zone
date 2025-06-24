@@ -47,10 +47,10 @@ const About = () => {
       <div className="about-page__items">
         {aboutItems.map(item => (
           <div key={item.title} className="card">
-            <h4 className="title">{item.title}</h4>
+            <h4 className="title-block">{item.title}</h4>
             <div className="card__item">
               <div className="card__item-content">
-                <h6>{item.subtitle}</h6>
+                <h5 className="title">{item.subtitle}</h5>
                 <ul className="text-lg">
                   {item.list.map((text, index) => (
                     <li key={index}>{text}</li>

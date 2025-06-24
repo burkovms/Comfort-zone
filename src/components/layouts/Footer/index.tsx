@@ -22,9 +22,6 @@ export const Footer = () => {
           </li>
         </ul>
         <div className="footer-copyrigt text-sm">© {year}, «Зона комфорта»</div>
-        <Link href="#" className="logo">
-          <Image src="/marketing-time.svg" alt="logo" width={140} height={28} />
-        </Link>
       </div>
     </footer>
   );

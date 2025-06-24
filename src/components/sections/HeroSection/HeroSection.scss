@@ -3,9 +3,26 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: visible;
-  padding-block: 60px 35vh;
+  padding-top: 60px;
+  padding-bottom: 35vh;
   height: 100vh;
   min-height: 640px;
+  @media (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 25vh;
+  }
+  @media (max-width: 575px) {
+    padding-right: 20px;
+    background-position: 48% 170px;
+  }
+  .main-logo {
+    display: none;
+    max-width: 88px;
+    @media (max-width: 767px) {
+      display: inline-flex;
+      margin-bottom: 24px;
+    }
+  }
   .wrap {
     position: sticky;
     overflow: hidden;
@@ -16,6 +33,9 @@
     font-weight: 300;
     text-transform: uppercase;
     padding-left: 0;
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
   }
   p {
     text-transform: uppercase;
@@ -23,6 +43,9 @@
     font-size: 90px;
     @media (max-width: 1680px) {
       font-size: 70px;
+    }
+    @media (max-width: 767px) {
+      font-size: 34px;
     }
   }
 }

@@ -3,6 +3,7 @@ import { programCategories } from '@/data/programs';
 import ThumbSlider from '@/components/sections/ThumbsSlider';
 import { LinkArror } from '@/components/ui/LinkArror';
 import Button from '@/components/ui/Button';
+import Image from 'next/image';
 import './ProgramDetail.scss';
 
 const video = {
@@ -12,6 +13,19 @@ const video = {
 };
 
 const slider = ['/progr-2.jpg', '/progr-3.jpg', '/progr-4.jpg'];
+
+const programLead = [
+  {
+    photo: '/pgogr-lead-1.jpg',
+    name: 'Євгенія Басовa',
+    profile: 'Тренер',
+  },
+  {
+    photo: '/pgogr-lead-2.jpg',
+    name: 'Студія «Sport ToyrnameN»',
+    profile: 'Партнер з проведення силових тренувань',
+  },
+];
 
 const findProgramBySlug = (slug: string) =>
   programCategories.flatMap(category => category.programs).find(program => program.slug === slug);
@@ -43,20 +57,18 @@ export default async function ProgramDetail({ params }: { params: Promise<{ slug
   if (!program) return notFound();
 
   return (
-    <section className="page-container p-block program-detail">
-      <p className="program-direction">
-        <LinkArror href="/programs">
-          <span>Програми</span>
-        </LinkArror>
-      </p>
+    <section className="page-container p-block program-detail single-page">
+      <LinkArror href="/programs">
+        <span>Програми</span>
+      </LinkArror>
       <h1>{program.title}</h1>
-      <div className="program-detail__wrap">
-        <div className="program-detail__left">
-          <div className="program-detail__slider-wrap">
+      <div className="program-detail__wrap single-page__wrap">
+        <div className="program-detail__left single-page__left">
+          <div className="wrap">
             <ThumbSlider video={video} slider={slider} />
           </div>
 
-          <div className="program-detail__left-info">
+          <div className="info">
             <div className="program-detail__info-item">
               <h6>Про програму:</h6>
               <p>
@@ -76,35 +88,29 @@ export default async function ProgramDetail({ params }: { params: Promise<{ slug
             <div className="program-detail__lead">
               <h6>Програму ведуть:</h6>
               <ul className="program-detail__lead-list">
-                <li>
-                  <span
-                    className="program-detail__lead-img"
-                    style={{ backgroundImage: 'url(/pgogr-lead-1.jpg)' }}
-                  />
-                  <div className="program-detail__lead-info">
-                    <a href="#" className="name">
-                      Євгенія Басмановська
-                    </a>
-                    <p>Головний тренер</p>
-                  </div>
-                </li>
-                <li>
-                  <span
-                    className="program-detail__lead-img"
-                    style={{ backgroundImage: 'url(/pgogr-lead-2.jpg)' }}
-                  />
-                  <div className="program-detail__lead-info">
-                    <a href="#" className="name">
-                      Студія «Sport ToyrnameN»
-                    </a>
-                    <p>Партнер з проведення силових тренувань</p>
-                  </div>
-                </li>
+                {programLead.map((item, index) => (
+                  <li key={index}>
+                    <Image
+                      className="program-detail__lead-img"
+                      src={item.photo}
+                      alt={item.name}
+                      width={122}
+                      height={122}
+                      quality={90}
+                    />
+                    <div className="program-detail__lead-info">
+                      <a href="#" className="name">
+                        {item.name}
+                      </a>
+                      <p>{item.profile}</p>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
-        <div className="program-detail__right">
+        <div className="program-detail__right single-page__right">
           <ul>
             <li>
               <h6>Тривалість:</h6>
