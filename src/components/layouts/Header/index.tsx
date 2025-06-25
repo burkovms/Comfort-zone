@@ -56,7 +56,7 @@ export const Header = () => {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.35, duration: 0.6, ease: 'easeOut' }}
+          transition={{ delay: 2.2, duration: 0.6, ease: 'easeOut' }}
           className="nav-wrap"
         >
           <div className="nav-cover">

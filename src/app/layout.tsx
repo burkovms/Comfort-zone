@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Open_Sans, Roboto_Slab } from 'next/font/google';
+import { PreloadWrapper } from '@/components/PreloadWrapper';
 import { Header } from '@/components/layouts/Header';
 import { Footer } from '@/components/layouts/Footer';
 
@@ -40,7 +41,9 @@ export default function RootLayout({
       <body className={`${openSans.variable} ${robotoSlab.variable}`}>
         <div className="app">
           <Header />
-          <main className="page-content">{children}</main>
+          <main className="page-content">
+            <PreloadWrapper>{children}</PreloadWrapper>
+          </main>
           <Footer />
         </div>
       </body>
