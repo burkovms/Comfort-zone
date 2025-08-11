@@ -36,26 +36,26 @@ const Preloader = () => {
             fill="#1CC27C"
           />
         </svg>
-        <p className="preloader-text">Зарядись энергией</p>
+        <p className="preloader-text">Зарядись енергією</p>
         <span className="charge">{count}%</span>
       </div>
       <ul className="preloader-wrap">
         <li>
           <span>
             <img src="/ellipse.png" alt="ellipse" />
-            Стресс
+            Стрес
           </span>
         </li>
         <li>
           <span>
             <img src="/ellipse.png" alt="ellipse" />
-            Усталость
+            Втома
           </span>
         </li>
         <li>
           <span>
             <img src="/ellipse.png" alt="ellipse" />
-            Напряжение
+            Напруження
           </span>
         </li>
       </ul>
